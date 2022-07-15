@@ -1,0 +1,30 @@
+
+<h1>Welcome to Contact Page</h1>
+<p>this is contact page</p>
+<p><b>Contact List:</b></p>
+      
+
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+            <% if (cont.length === 0) { %>
+                <p><i><b>Data is empty</b></i></p>
+            <% }else { %>
+                <% let count = 1 %>
+                <% cont.forEach(element=> { %>
+                    <tr>
+                        <td><%= count %> </td>
+                        <td><%= element.name %></td>
+                        <td><%= element.email %></td>
+                    </tr>
+                    <% count++; %> 
+                    <% }) %>
+            <% } %>
+    </tbody>
+    </table>
